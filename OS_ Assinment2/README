@@ -1,0 +1,19 @@
+kernel code : processlist.c
+user code : user_app.c
+
+below commands will help you to run the code with make file
+
+ sudo insmod processlist.ko    //to insert module
+
+sudo rmmod processlist.ko    //to remove module
+
+gcc -o user_app user_app.c // to compile user programm
+
+
+
+sudo ./user_app // to run user program
+
+
+use cat command to read
+use dmesg to read logs
+
