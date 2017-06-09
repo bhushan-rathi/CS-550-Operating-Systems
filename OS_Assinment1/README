@@ -1,0 +1,15 @@
+Name: Bhushan Rathi
+BU id: B00670674
+
+to execute use make command
+
+file name: brathi1_os_assign1.c
+
+
+Objectives
+
+Learn how to create and terminate processes.
+Learn about process hierarchy.
+Learning to use system calls fork(), exec(), wait(), getpid(), getppid()
+Practice using command-line arguments and recursion.
+
