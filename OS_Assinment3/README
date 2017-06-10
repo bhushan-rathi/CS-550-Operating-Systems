@@ -1,0 +1,29 @@
+kernel code : linepipe.c
+user code : consumer.c and produser.c
+
+below commands will help you to run the code with make file
+
+sudo insmod linepipe.ko var=5    //to insert module
+
+sudo rmmod linepipe.ko    //to remove module
+
+gcc -o consumer consumer.c // to compile user program
+
+gcc -o producer producer.c // to compile user program
+
+sudo ./consumer // to run user program
+
+sudo ./producer // to run user program
+
+use sudo cat command to read
+use sudo dmesg to read logs
+
+dmesg //to check kernal msg
+
+sudo dmesg -c // to clear kernal msg
+
+ls -l /dev/linepipe     //to check module insterted or not
+
+mkfifo <pipename> //to create pipe
+
+ls -l <pipe name> // to check <pipe name> pipe or not 
