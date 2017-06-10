@@ -1,0 +1,19 @@
+kernel code : jprobeE.c
+
+below commands will help you to run the code with make file
+
+sudo insmod jprobeE.ko var=<pid>    //to insert module
+
+sudo rmmod linepipe.ko    //to remove module
+
+use sudo cat command to read
+use sudo dmesg to read logs
+
+dmesg //to check kernal msg
+
+sudo dmesg -c // to clear kernal msg
+
+
+TASK 2 | Report 
+
+
