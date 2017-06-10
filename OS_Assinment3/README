@@ -1,3 +1,12 @@
+Assignment 3
+
+Building Named Pipe for Exchanging Lines
+
+Objective
+
+learn to implement a kernel-level pipe for exchanging lines among user-level processes. 
+also to learn about concurrency, synchronization, and various kernel primitives. 
+
 kernel code : linepipe.c
 user code : consumer.c and produser.c
 
