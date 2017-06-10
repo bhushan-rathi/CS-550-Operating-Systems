@@ -1,0 +1,40 @@
+Assignment 2
+
+Objective: Building a Kernel Module and Character Device to list all processes
+
+Implement a kernel module that creates a /dev/process_list character device. The character device should support the read() operation. When the read() system call is invoked on your character device from a user space process, your kernel module should return to the following information for all currently running processes:
+
+process ID
+parent process ID
+the CPU on which the process is running
+its current state.
+For example, the output could be as follows:
+	PID=1 PPID=0 CPU=4 STATE=TASK_RUNNING
+	PID=2 PPID=0 CPU=2 STATE=TASK_INTERRUPTIBLE
+	PID=10 PPID=2 CPU=0 STATE=TASK_UNINTERRUPTIBLE
+	PID=16434 PPID=16424 CPU=10 STATE=TASK_DEAD
+	PID=14820 PPID=16424 CPU=8 STATE=TASK_WAKEKILL,TASK_UNINTERRUPTIBLE
+	...and so forth
+	
+Note that the "state" field in task_struct can be -1, 0 or greater than 0. A state value of 1 or more indicates a combination (bitwise OR) of values listed here: http://lxr.free-electrons.com/source/include/linux/sched.h#L207
+
+BEWARE that bugs in kernel code may either crash your kernel immediately or may have no immediate visible effect, but may have a delayed effect that is disastrous. Therefore, you cannot assume that the thing you did most recently is necessarily the cause of a crash.
+
+
+
+kernel code : processlist.c
+user code : user_app.c
+
+below commands will help you to run the code with make file
+
+ sudo insmod processlist.ko    //to insert module
+
+sudo rmmod processlist.ko    //to remove module
+
+gcc -o user_app user_app.c // to compile user programm
+
+sudo ./user_app // to run user program
+
+use cat command to read
+use dmesg to read logs
+
