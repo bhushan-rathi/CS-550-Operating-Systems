@@ -21,6 +21,3 @@ dmesg //to check kernal msg
 sudo dmesg -c // to clear kernal msg
 
 
-TASK 2 | Report 
-
-
